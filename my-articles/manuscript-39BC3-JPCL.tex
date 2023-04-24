@@ -1,0 +1,251 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a (brief) model paper using the achemso class
+%% The document class accepts keyval options, which should include
+%% the target journal and optionally the manuscript type.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal=jpclcd,manuscript=article, layout=twocolumn]{achemso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional packages needed here.  Only include packages
+%% which are essential, to avoid problems later.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{chemformula} % Formula subscripts using \ch{}
+\usepackage[T1]{fontenc} % Use modern font encodings
+\usepackage[version=4]{mhchem}
+\usepackage{epstopdf}
+\usepackage{booktabs, array, mathptmx, float, tabularx, booktabs, lipsum,bm, amsmath,multirow,soul}
+\usepackage{siunitx, xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If issues arise when submitting your manuscript, you may want to
+%% un-comment the next line.  This provides information on the
+%% version of every file you have used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\listfiles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional macros here.  Please use \newcommand* where
+%% possible, and avoid layout-changing macros (which are not used
+%% when typesetting).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Meta-data block
+%% ---------------
+%% Each author should be given as a separate \author command.
+%%
+%% Corresponding authors should have an e-mail given after the author
+%% name as an \email command. Phone and fax numbers can be given
+%% using \phone and \fax, respectively; this information is optional.
+%%
+%% The affiliation of authors is given after the authors; each
+%% \affiliation command applies to all preceding authors not already
+%% assigned an affiliation.
+%%
+%% The affiliation takes an option argument for the short name.  This
+%% will typically be something like "University of Somewhere".
+%%
+%% The \altaffiliation macro should be used for new address, etc.
+%% On the other hand, \alsoaffiliation is used on a per author basis
+%% when authors are associated with multiple institutions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{3-X Structural Model and Common Characteristics of Anomalous Thermal Transport: The Case of Two-Dimensional Boron Carbides}
+
+\author{Hanpu Liang}
+\author{Hongzhen Zhong}
+\author{Sheng Huang}
+\author{Yifeng Duan}
+\email{yifeng@cumt.edu.cn}
+\affiliation{School of Materials and Physics, China University of Mining and Technology, Xuzhou, Jiangsu 221116, China}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The document title should be given as usual. Some journals require
+%% a running title from the author: this should be supplied as an
+%% optional argument to \title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Some journals require a list of abbreviations or keywords to be
+%% supplied. These should be set up here, and will be printed after
+%% the title and author information, if needed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \abbreviations{IR,NMR,UV}
+% \keywords{American Chemical Society, \LaTeX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The manuscript does not need to include \maketitle, which is
+%% executed automatically.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% The "tocentry" environment can be used to create an entry for the
+	%% graphical table of contents. It is given here as some journals
+	%% require that it is printed as part of the abstract page. It will
+	%% be automatically moved as appropriate.
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\begin{tocentry}
+	%
+	%Some journals require a graphical entry for the Table of Contents.
+	%This should be laid out ``print ready'' so that the sizing of the
+	%text is correct.
+	%
+	%Inside the \texttt{tocentry} environment, the font used is Helvetica
+	%8\,pt, as required by \emph{Journal of the American Chemical
+	%Society}.
+	%
+	%The surrounding frame is 9\,cm by 3.5\,cm, which is the maximum
+	%permitted for  \emph{Journal of the American Chemical Society}
+	%graphical table of content entries. The box will not resize if the
+	%content is too big: instead it will overflow the edge of the box.
+	%
+	%This box and the associated title will always be printed on a
+	%separate page at the end of the document.
+	%
+	%\end{tocentry}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% The abstract environment will automatically gobble the contents
+	%% if an abstract is not used by the target journal.
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tocentry}
+	\includegraphics[width=5cm]{entry.pdf}
+	We first proposed the 3-X structural model theory to unify the multi-triangle configurations in two-dimensional system, and further confirmed 3-9 \ce{BC3} by evolutionary algorithm to perfectly verify the rationality of our model.
+\end{tocentry}
+
+%\date{\today}
+
+\begin{abstract}
+Improving the reliability of electronic devices requires an effective heat management, the key is the relationship between the thermal transport and temperature. Inspired by synthesized T-carbon and H-boron, the 3-X structural models are proposed to unify the two-dimensional (2D) multi-triangle materials. Employing structural searches, we identify the stability of 3-X configuration in 2D boron carbides as 3-9 \ce{BC3} monolayer, which, unexpectedly, exhibits a linear thermal conductivity versus temperature, not the traditional $\sim1/T$ trend. We summarize the common characteristics and explore why this behavior is absent in 3-9 \ce{AlC3} and graphene via investigating the optical modes. We show that the linear behavior is a direct consequence of the special oscillation modes by the 3-X model associated with the largest group velocity. We find that 2D materials with such behavior usually share a relatively low thermal conductivity. Our work paves the way to deeply understand the lattice thermal transport and to widen nanoelectronic applications. 
+\end{abstract}
+
+\maketitle
+
+
+	Boron and Carbon are adjoining neighbours in the periodic table and can form a diversity of allotropic structures by the $sp$-, $sp^2$- and $sp^3$-hybridized bonds. With rapid progresses in 2D materials, various allotropes are available nowadays, for example, carbon nanotubes \cite{1991-nature-nanotube}, fullerenes \cite{1985-nature-fullerene}, graphene \cite{2004-science-graphene}, honeycomb borophene \cite{h-bor}, triangular borophene \cite{t-bor}, and other 2D sheets \cite{exp-2d-B-nc,the-2d-b-1,the-2d-b-2}. Recently, T-carbon was proposed by substituting each atom in cubic diamond with a carbon tetrahedron \cite{2011-PRL-Tcarbon}, and was verified by the synthesis of T-carbon nanowires via the laser irradiation method \cite{2017-NC-T-carbon-exp}. A boron allotrope as cF-B$_8$ shares the similar structure composed of the boron tetrahedrons as T-carbon \cite{T-boron-the}. In T-carbon-like structures, the triangle-dodecagon (3-12) configuration exists along the [110] direction. H-boron was further proposed by arranging the boron tetrahedron at each site of hexagonal diamond \cite{2019-PRM-Hboron,2021-JPCL-Hboron}, where the 3-12 sketch appears along the [001] direction. However, the 3-12 monolayers remain unclear in 2D materials due to the too strong covalent bonds. Herein, inspired by T-carbon and H-boron, we first propose the 3-X (X=7, 8, 9, 10, 11 or 12) structural models to unify the multi-triangle configurations in 2D materials by putting the atomic triangles on sites of hexagonal lattice. For example, the 3-9 configuration is available once three triangles are alternately arranged in a hexagonal ring. The sketches of 3-X (X=7, 9, and 12) models are illustrated in scheme \ref{sch:3Xconfigurations}.
+	
+	\begin{scheme}[b]
+		\centering
+		\includegraphics[width=8.6cm]{sch1.pdf}
+		\caption{Structural sketches of 3-7, 3-9 and 3-12 structural models.}
+		\label{sch:3Xconfigurations}
+	\end{scheme}
+
+	Boron is short of one electron, compared to carbon, thereby, a large difference exists in the bonding and structural properties \cite{2014-JPCL-porousBN,2020-JPCL-BCN,2021-JPCL-BCP}. For example, cubic and hexagonal diamonds remain unstable when carbon atoms are substituted by boron \cite{2019-PRM-Hboron}. The emphasis in this work is the 3-X configurations of 2D boron carbides by identifying the chemical stoichiometry, i.e., the "X", to stabilize the 2D configurations, together with physical properties for further applications. Since the graphene and borophene are experimentally available, 2D 3-X boron carbides are promising to remain stable and thus to reflect the simplicity of planar clusters.
+	
+
+	Structural properties are critical to the thermal conductivity $\kappa$  \cite{2018-nanoscale-DDI,2017-PRB-graphene-mass,2019-nanoscale-reflection,2018-JPCL-optical,2019-JPCL-CrTiCT,2020-PRL-temp-indepent,2021-JPCL-highZT}. Most materials in either bulk or low-dimensional configuration display a temperature dependence of thermal conductivity as $\kappa\sim1/T^{\alpha}$, where the $\alpha$ varies from 0.85 to 1.05 \cite{2021-PRL-K-TaN,2017-JPCL-2D84,2021-JPCL-deng,2020-JPCL-chenxin}, since the accumulated population of phonons by increasing temperature reduces the mean free paths and hence the scattering processes are greatly activated. However, a linear thermal conductivity versus temperature appears in hexagonal GaN monolayer by the large difference in atom mass and electronegativity \cite{2017-PRB-GaN,2018-JPCL-penta}.
+	
+	In this Letter, we propose the 3-X structural models to unify the 2D multi-triangle materials and identify the stability as 3-9 \ce{BC3} monolayer in 2D boron carbides using the first-principles structural searches, the structural details are illustrated in figure \ref{fig:kappa}(a). Unexpectedly, 3-9 \ce{BC3} displays a linear thermal conductivity versus temperature, but the very close atom mass and electronegativity of B and C atoms contradict the mechanism of GaN monolayer \cite{2017-PRB-GaN}. Furthermore, the large difference in atom mass and electronegativity clearly exists in 3-9 \ce{AlC3} monolayer, but this anomalous behavior is absent. We summarize the common characteristics of the linear behavior, and point out that 2D materials with this behavior usually share a relatively low thermal conductivity. 
+	
+		\begin{figure*}[htbp]
+		\centering
+		\includegraphics[width=15cm]{fig1.pdf}
+		\caption{(a) 3-9 \ce{BC3} configuration, where carbon triangles are alternately arranged in hexagonal lattice, together with the electron localization functions. (b) Temperature dependent thermal conductivity in 3-9 \ce{BC3} and \ce{AlC3} monolayers. The absolute and percentage (inset panels) contributions from the phonon branches in (c) 3-9 \ce{BC3} and (d) \ce{AlC3} monolayers.}
+		\label{fig:kappa}
+	    \end{figure*}
+	
+	Structural searches are performed by the USPEX code \cite{UP1,UP2}, in combination with structural relaxations and total energy calculations within the generalized gradient approximation \cite{GGA, DFT-1,DFT-2}, and G$_0$W$_0$-BSE optical absorption \cite{2015-PRB-BSE} as implemented in the VASP code \cite{VASP-1,VASP-2,VASP-3}. Thermal conductivity is predicted by the ShengBTE code \cite{2003-PRB-Boltzmann, 2014-CPC-ShengBTE}, where the fully iterative solution of the Boltzmann transport equation is adopted. Phonon dispersions are calculated by the PHONONPY code \cite{2015-SM-PHONONPY,2001-RMP-phonon,2016-NPJ-phonon}.
+	The computational details and calculated data are referred in Section I in the Supporting Information (SI). The lattice thermal conductivity is defined as \cite{2014-CPC-ShengBTE}
+    \begin{equation}
+    	\kappa = \sum_\lambda C_{\lambda} v_\lambda^2 \tau_\lambda, \label{eq:kappa}
+    \end{equation}
+    where $C_\lambda=n^0_\lambda(n^0_\lambda+1)\hbar^2\omega^2_\lambda/Vk_BT^2$ is the heat capacity per mode,  $v_\lambda=\partial\omega/\partial \bm{q}$ is the group velocity, and the phonon relaxation time $\tau_\lambda$ is inverse to the scattering rates, which are associated to the anharmonic IFCs $\Phi_{\lambda \lambda' \lambda''}^{\pm}$ as follows
+    \begin{align}
+    	W^{\pm}_{\lambda \lambda' \lambda''} =& \dfrac{\hbar \pi}{4N \omega_{\lambda}\omega_{\lambda'}\omega_{\lambda''}} \left\{ n^0_{\lambda'} -  n^0
+    	_{\lambda''}\atop n^0_{\lambda'} +  n^0_{\lambda''} +1 \right\}\notag\\
+    	&\times \left|\Phi_{\lambda \lambda' \lambda''}^{\pm}\right|^2\delta( \omega_{\lambda} \pm  \omega_{\lambda'} -  \omega_{\lambda''}), \label{eq:SRs}
+    \end{align}
+    where $\omega_{\lambda}$ is the phonon frequency.
+
+	Structural searches identify that the proposed 3-X configurations stabilize as 3-9 \ce{BC3} monolayer in 2D boron carbides (see figure \ref{fig:kappa}(a)). The carbon triangles result in a reduced symmetry ($P\bar{6}m2$), compared to hexagonal \ce{BC3} ($P6/mmm$) (see figure S2). The optimized lattice constant of \SI{4.04}{\angstrom} is considerably larger than \SI{2.59}{\angstrom} of hexagonal \ce{BC3} \cite{2019-Carbon-BC3} and \SI{2.46}{\angstrom} of graphene \cite{2010-PRB-graphene-kappa}. Thereby the density is smaller in 3-9 \ce{BC3} (0.55 g$/\rm{cm^2}$) than in hexagonal \ce{BC3} (0.68 g$/\rm{cm^2}$) and graphene (0.76 g$/\rm{cm^2}$). Structural details and stability are summarized in Section II in the SI. The lattice thermal conductivity at room temperature is \SI{18.54}{W/mK} in 3-9 \ce{BC3}, which is significantly lower than $\sim$\SI{400}{W/mK} in hexagonal \ce{BC3} \cite{2019-Carbon-BC3} and $\sim$\SI{3000}{W/mK} in graphene \cite{2016-PRB-Si-kappa}.
+
+	\begin{figure*}[t]
+		\centering	
+		\includegraphics[width=15.5cm]{fig2.pdf}
+		\caption{(a)-(d) Phonon spectra as well as density of states (DOS), and the scattering-rate distributions of the FO branch with the Born effective charges and the dielectric constants in the first Brillouin zone in 3-9 \ce{BC3} and \ce{AlC3}. (e)-(g) The scattering rates and the heat capacity versus frequency at representative temperatures, and the maximum group velocity of each phonon branch in 3-9 \ce{BC3}.}
+		\label{fig:phonon}
+	\end{figure*}
+	
+	Most interestingly, 3-9 \ce{BC3} monolayer shows a linear thermal conductivity versus temperature, not the traditional $\kappa\sim1/T$ law in most materials including 3-9 \ce{AlC3} and graphene (see figure \ref{fig:kappa}(b)). The expected huge phonon gap and splitting between longitudinal optical (LO) and transverse optical (TO) modes are observable in 3-9 \ce{AlC3} and 2D GaN \cite{2017-PRB-GaN}, but not in 3-9 \ce{BC3} (see figure \ref{fig:phonon}(a) and (b)), thus this anomalous behavior awaits to be discussed deeply.
+	
+
+	Figure \ref{fig:kappa} (c) and (d) reveal that the phonon transport is dominated by the flexural acoustic (FA) mode at low temperature and by the flexural optical (FO) mode (the seventh branch in \ce{BC3} and the fourth in \ce{AlC3} in details) at high temperature. According to the reflection-symmetry-based scattering selection \cite{2010-PRB-flexural-phonon,2019-nanoscale-reflection}, the eigenvectors of phonon modes under a horizontal reflection operation $\sigma_h$ satisfy that
+	\begin{equation}
+		e^{x}_{\lambda} \stackrel{\sigma_h}{\longrightarrow}e^{x}_{\lambda},\quad e^{y}_{\lambda} \stackrel{\sigma_h}{\longrightarrow}e^{y}_{\lambda}, \quad  e^{z}_{\lambda} \stackrel{\sigma_h}{\longrightarrow} - e^{z}_{\lambda}.
+	\end{equation}
+	Three-phonon scatterings with an odd number (one or three) of out-of-plane modes are prohibited, such as FA + FA $\to$ FA, FA + TA $\to$ TA, and FO $\to$ FA + FA.	Thereby the FA and FO modes determine the thermal conductivity. The FA branch routinely obeys the $\kappa\sim1/T$ trend. The FO contribution first rises and then drops slightly with temperature, and overwhelms the FA branch after the crossovers. At relatively high temperature, the FO mode contributes above 40\% in \ce{BC3}, while $\sim$26\% in \ce{AlC3}. Therefore, it is feasible to redefine the thermal conductivity versus temperature by the FO mode in 3-9 \ce{BC3}.
+
+	
+	\begin{figure*}[htbp]
+		\centering 
+		\includegraphics[width=16.5cm]{fig3.pdf}
+		\caption{Phonon vibrational modes at the $\Gamma$, M and K points, and  scattering-rate (SRs) distributions in the first Brillouin zone for each phonon branch in 3-9 \ce{BC3} monolayer.}
+		\label{fig:vibration}
+	\end{figure*}
+	
+    The linear thermal conductivity versus temperature disappears when the Born effective charges ($Z^*$) and the dielectric constants ($\epsilon^*$) are neglected. In addition, the thermal conductivity is underestimated by 35.28\% in \ce{BC3} and by 10.27\% in \ce{AlC3} at room temperature. Figures \ref{fig:phonon}(c) and (d), and S3 reveal that the variations in scattering rates by the inclusion of $Z^*$ and $\epsilon^*$ mainly appear at the FO mode. After neglecting the $Z^*$ and $\epsilon^*$, the scattering channels are greatly activated for the FO modes in 3-9 \ce{BC3} and \ce{AlC3} near the $\Gamma$ and K points, respectively. The removal of long-range electrostatic Coulomb interactions seriously suppresses the FO contribution, which is no longer dominant in the thermal conductivity (see figure S4).
+    
+	
+	To comprehensively reveal this linear behavior, we focus on the following questions: (1) Why the thermal conductivity from optical branch first increases and then decreases with temperature? (2) Why the seventh (the fourth) branch contributes the most to the thermal conductivity among optical modes in 3-9 \ce{BC3} (\ce{AlC3})? (3) Why the seventh branch in 3-9 \ce{BC3} contributes relatively more than the fourth in 3-9 \ce{AlC3}?
+
+	The thermal conductivity is determined by the volumetric specific heat capacity $C_V$, the group velocity $v_\lambda$, and the relaxation time $\tau_\lambda$. 
+	The group velocity is nearly temperature independent \cite{2017-PRB-GaN,2017-PRB-v}, which is clarified by the lattice constant and the thermal expansion coefficient versus temperature in 3-9 \ce{BC3} (see figure S5).
+	The detailed analyses are described in Section III in the SI.
+	As temperature increases, the heat capacity first increases and finally converges because of the total activation of optical phonons (see figure 2(e)). Our simulations further reveal that the heat capacity displays a very strong second-order (i.e., $\sim T^2$) character in a wide temperature range (see figure S6). On the other hand, the temperature-enhanced scattering suppresses the thermal conductivity as the known $\sim 1/T$ trend according to the Bose distribution $n^0_\lambda=(\exp{[(E_\lambda-E_F)/k_BT]}-1)^{-1}$ (see figure 2(f)). Therefore, it is more likely for the linear thermal conductivity to appear in this temperature range. Meanwhile, it is necessary for the percentage contribution from optical modes to be large enough to reshape the thermal conductivity with temperature. That is why the linear behavior is present in 3-9 \ce{BC3}, not in 3-9 \ce{AlC3} and graphene. The underlying mechanisms are described in Section IV in the SI in more details.
+
+    Figure \ref{fig:phonon}(g) displays that the seventh branch shares the maximum group velocity $\sim$32.87 km/s among optical modes in 3-9 \ce{BC3}, and hence contributes the most to the thermal conductivity. The large group velocity agrees well with the much dispersive phonon branch and closely correlates with the atom vibration, which arises from the strong long-range Coulomb interaction, \cite{2001-RMP-phonon}
+    \begin{equation}
+    	\bm{F} \equiv -\frac{\partial E}{\partial \bm{u}}=-\left(M\omega_0^2 + \frac{4\pi e^2Z^2}{\Omega\epsilon_{\infty}}\right)\bm{u},
+    \end{equation}
+    where the restoring force $\bm{F}$ is proportional to the atomic motion displacement $\bm{u}$. The theoretical analyses are described in Section V in the SI in more details.
+    
+    Figure \ref{fig:vibration} reveals that the seventh branch shares the distinctive out-of-plane vibrations. Two C atoms move up and the rest C and B atoms down, thus the mass ratio ($m_u$/$m_d$) reaches $\sim$0.95 at the M and K points. Thereby the FO mode behaves the maximum vibrational amplitude by the atom resonance along the out-of-plane direction (listed in Table S2), which greatly enhances the thermal conductivity via enlarging the group velocity. Note that B atom has a slightly larger amplitude than C atom due to the slighter mass. Analogically, to realize the atom resonance in 3-9 \ce{AlC3}, Al and three C atoms vibrate along the opposite directions (see figures \ref{fig:scattering}(c) and S7) and the $m_u$/$m_d$ reaches 0.75. Similarly, the fourth branch behaves the maximum amplitude and the maximum group velocity among optical modes (see in Tables S2 and S3, and figure S8). Finally, due to the difference in the atom mass and the $m_u$/$m_d$, the maximum amplitude is 0.146 {\AA} in \ce{AlC3}, much smaller than 0.208 {\AA} in \ce{BC3}.
+    Figure \ref{fig:vibration} also reveals that the scattering processes mainly occur in low-frequency range and seldom at the $\Gamma$ point. For example, the third acoustic branch exhibits the largest scattering rate near the M point and thus greatly lowers the thermal conductivity.
+    
+    Figure \ref{fig:scattering}(a) displays that the group velocities are overall comparable in 3-9 \ce{BC3} and \ce{AlC3}, with the maximum values at the fourth and seventh branches, respectively. The scattering phase space is clearly larger in \ce{AlC3} than in \ce{BC3}, especially near the fourth and seventh branches (see figures \ref{fig:scattering}(b)). Thereby the thermal transport is slightly weaker in \ce{AlC3} than in \ce{BC3} overall. On the other hand, the fourth-branch contribution to the thermal conductivity is seriously suppressed by the large phase space in 3-9 \ce{AlC3}, and hence the linear behavior is absent due to the small percentage. Phonon DOS reveals that B atoms mainly contribute above 20 THz, while Al atom below 20 THz due to the heavier mass. The down-shift of optical modes, especially the fourth branch, significantly increases the phonon population at low frequency in 3-9 \ce{AlC3}, which greatly enlarges the phase space of \textit{aao} scattering and finally reduces the thermal conductivity. 
+    
+    \begin{figure}[t]
+    	\centering
+    	\includegraphics[width=8.4cm]{fig4.pdf}
+    	\caption{(a) The group velocity and (b) the scattering phase space P3 in 3-9 \ce{BC3} and \ce{AlC3}. The shadow areas indicate the fourth and the seventh branches in 3-9 \ce{AlC3} and \ce{BC3}, respectively. (c) The vibrational modes of the fourth branch in 3-9 \ce{AlC3}. (d) The regular residuals between the second-order polynomial fittings and the DFT data, and the lines represent the higher-order fittings.}
+    	\label{fig:scattering}
+    \end{figure}
+ 	
+	Our next focus is why the carbon triangles in 3-9 \ce{BC3} seriously suppress the thermal transport, compared to hexagonal \ce{BC3} monolayer, although they consist of the $sp^2$ covalent bonds with the same chemical stoichiometry. 
+	The anharmonicity of covalent bonds is evaluated by the regular residual $O(r_z^3) = E_{\text{cal}}(r_z) - E_{\text{fit}}(r_z)$ between the calculated $E_{\text{cal}}(r_z)$ and the polynomial fitting \cite{2017-PRB-anharmonicity}
+	\begin{align}
+		E_{\text{fit}}(r_z) = a+br_z+cr_z^2 + O(r_z^3).
+	\end{align} 
+	 The discussions about the second-order terms are summarized in Section VI in the SI. Two kinds of covalent bonds exist in 3-9 and hexagonal \ce{BC3} monolayers (see the inserted panels in figure \ref{fig:scattering}(d)). Figure \ref{fig:scattering}(d) shows that 3-9 \ce{BC3} possesses a much stronger anharmonicity than hexagonal \ce{BC3}, consistent with the more asymmetrical charge distribution in 3-9 configuration. The charge distribution determines the interatomic interactions (e.g., force constants) and thus reflects the anharmonicity of covalent bonds \cite{2017-PRB-v}. Thereby the $sp^2$ hybridizations are usually irregular in the 3-X structural models due to the asymmetry in the charge distribution by the carbon triangles (see the ELFs in figures \ref{fig:kappa}(a) and S2(b)). Furthermore, in 3-9 \ce{BC3}, the anharmonicity of C atoms is stronger than that of B atoms, due to the more asymmetrical charge distribution around the carbon triangles. The anharmonicity activates the scattering and hence results in a lower thermal conductivity in 3-9 than in hexagonal \ce{BC3}. Analogically, in bulk cases \cite{2017-PRB-T-kappa}, T-carbon shares a lower thermal conductivity than C-diamond due to the carbon tetrahedron. Our discussions are also applicable to the ultralow thermal conductivity in chalcogenide materials \cite{ultralow-LP-jpcl-2020}: where the existence of lone pair cations introduces an asymmetry into the charge distribution and hence enhance the anharmonicity.    
+		
+	In summary, inspired by T-carbon and H-boron, we propose the 3-X structural models to unify the 2D multi-triangle materials. 
+	Structural searches identify the stability as 3-9 \ce{BC3} monolayer in 2D boron carbides, which exhibits a linear thermal conductivity versus temperature, not the traditional $\kappa\sim1/T$ law in most materials. To point out what kinds of 2D materials favor such behavior, we summarize the common characteristics by analyzing the absolute and percentage contributions from the optical modes. We point out that 2D materials with such behavior usually share a relatively low thermal conductivity and explain why the linear behavior is absent in 3-9 \ce{AlC3} and graphene. We further unveil that the so-called anomalous thermal conductivity versus temperature is usually a linear relationship. Our findings are universal to other 2D materials and are beneficial to promote the nanoelectronic applications for 2D semiconductors.
+	
+	
+	\noindent\textbf{Notes}
+	
+	\noindent The authors declare no competing financial interest.
+
+	
+	
+
+	\begin{acknowledgement}
+	%\section{ACKNOWLEDGMENTS}
+	The work is sponsored by the National Natural Science Foundation of China (No.11774416), the Fundamental Research Funds for the Central Universities (Nos.2017XKZD08 and 2015XKMS081), the Postgraduate Research \& Practice Innovation Program of Jiangsu Province (No. KYCX20\_2039) and the Assistance Program for Future Outstanding Talents of China University of Mining and Technology (No. 2020WLJCRCZL063).
+	\end{acknowledgement}
+
+	\begin{suppinfo}
+		See Supporting Information for more details on the structural parameters, phonon spectra, Bader charges, Born effective charges, ELF, thermal conductivity, phonon vibrational modes, group velocities, and scattering rates.
+	\end{suppinfo}
+	
+	%\bibliographystyle{apsrev4-2}
+	\bibliography{BC3-ref}
+ 	
+ 	
+\end{document}
+
